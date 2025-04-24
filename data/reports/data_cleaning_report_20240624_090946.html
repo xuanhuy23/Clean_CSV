@@ -1,0 +1,128 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="utf-8">
+            <title>Báo cáo làm sạch dữ liệu</title>
+            <style>
+                body { font-family: Arial, sans-serif; margin: 20px; }
+                h1, h2, h3 { color: #444; }
+                .container { max-width: 1200px; margin: 0 auto; }
+                table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
+                th, td { border: 1px solid #ddd; padding: 6px; text-align: left; }
+                th { background-color: #f2f2f2; }
+                .summary { background-color: #f9f9f9; padding: 15px; border-radius: 4px; margin: 15px 0; }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <h1>Báo cáo làm sạch dữ liệu CSV</h1>
+                <p><strong>Thời gian:</strong> 2024-06-24 09:09:46</p>
+                
+                <div class="summary">
+                    <h2>Tóm tắt</h2>
+                    <p><strong>File đầu vào:</strong> data/raw/input.csv</p>
+                    <p><strong>File đầu ra:</strong> D:\Code\Python\Clean-CSV\data\processed\output.csv</p>
+                    <p><strong>File log:</strong> logs\data_cleaning_20240624_090945.log</p>
+                </div>
+                
+                <h2>Thống kê dữ liệu</h2>
+                <table>
+                    <tr>
+                        <th>Chỉ số</th>
+                        <th>Trước khi làm sạch</th>
+                        <th>Sau khi làm sạch</th>
+                        <th>Thay đổi</th>
+                    </tr>
+        
+                <tr>
+                    <td>Số dòng</td>
+                    <td>300</td>
+                    <td>300</td>
+                    <td>-0</td>
+                </tr>
+            
+                <tr>
+                    <td>Số cột</td>
+                    <td>7</td>
+                    <td>7</td>
+                    <td>-0</td>
+                </tr>
+            
+                <tr>
+                    <td>Giá trị thiếu</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>-0</td>
+                </tr>
+            
+                <tr>
+                    <td>Dung lượng bộ nhớ</td>
+                    <td>51291.00 MB</td>
+                    <td>36317.00 MB</td>
+                    <td>-14974.00 MB (29.2%)</td>
+                </tr>
+            
+                </table>
+                
+                <h2>Các bước xử lý</h2>
+                <table>
+                    <tr>
+                        <th>Bước</th>
+                        <th>Phương pháp</th>
+                        <th>Chi tiết</th>
+                    </tr>
+        
+                    <tr>
+                        <td>1. Xử lý giá trị thiếu</td>
+                        <td>fill_median</td>
+                        <td>Đã điền giá trị thiếu bằng phương pháp median</td>
+                    </tr>
+                
+                    <tr>
+                        <td>2. Chuẩn hóa văn bản</td>
+                        <td>normalize_text</td>
+                        <td>Đã chuẩn hóa các cột văn bản (loại bỏ khoảng trắng thừa, dấu câu thừa)</td>
+                    </tr>
+                
+                    <tr>
+                        <td>3. Xử lý tính nhất quán chữ hoa/thường</td>
+                        <td>title</td>
+                        <td>Đã chuyển các chuỗi văn bản sang dạng title</td>
+                    </tr>
+                
+                    <tr>
+                        <td>4. Chuẩn hóa ngày tháng</td>
+                        <td>standardize_dates</td>
+                        <td>Đã chuẩn hóa 2 cột ngày tháng</td>
+                    </tr>
+                
+                    <tr>
+                        <td>5. Chuyển đổi kiểu dữ liệu</td>
+                        <td>convert_to_numeric</td>
+                        <td>Đã chuyển đổi 5 cột sang kiểu số</td>
+                    </tr>
+                
+                    <tr>
+                        <td>6. Xử lý bản ghi trùng lặp</td>
+                        <td>remove_duplicates</td>
+                        <td>Đã loại bỏ 0 bản ghi trùng lặp</td>
+                    </tr>
+                
+                    <tr>
+                        <td>7. Xử lý giá trị ngoại lai</td>
+                        <td>iqr</td>
+                        <td>Đã xử lý giá trị ngoại lai trên các cột số với phương pháp iqr</td>
+                    </tr>
+                
+                    <tr>
+                        <td>8. Chuẩn hóa định dạng dữ liệu</td>
+                        <td>N/A</td>
+                        <td>Đã áp dụng định dạng phù hợp cho 3 cột</td>
+                    </tr>
+                
+                </table>
+            </div>
+        </body>
+        </html>
+        

@@ -1,0 +1,33 @@
+2025-04-24 13:49:58,469 - root - INFO - Bắt đầu quá trình làm sạch dữ liệu. File log: logs\data_cleaning_20250424_134958.log
+2025-04-24 13:49:58,473 - root - INFO - Đã tạo thư mục đầu ra: D:\Zalo\Zalo Received Files\Clean-CSV\data\processed
+2025-04-24 13:49:58,473 - root - INFO - Đọc dữ liệu từ: data/raw/input.csv
+2025-04-24 13:49:58,496 - root - INFO - Đã đọc thành công file: data/raw/input.csv (300 dòng x 7 cột)
+2025-04-24 13:49:58,496 - root - INFO - Đã đọc thành công: 300 dòng x 7 cột
+2025-04-24 13:49:58,622 - root - INFO - Bắt đầu xử lý giá trị thiếu với phương pháp: fill_median
+2025-04-24 13:49:58,624 - root - INFO - Sau khi xử lý giá trị thiếu: 300 dòng x 7 cột
+2025-04-24 13:49:58,624 - root - INFO - Bắt đầu chuẩn hóa văn bản
+2025-04-24 13:49:58,631 - root - INFO - Sau khi chuẩn hóa văn bản: 300 dòng x 7 cột
+2025-04-24 13:49:58,640 - root - INFO - Bắt đầu chuẩn hóa ngày tháng
+2025-04-24 13:49:58,715 - root - INFO - Sau khi chuẩn hóa ngày tháng: 300 dòng x 7 cột
+2025-04-24 13:49:58,715 - root - INFO - Bắt đầu chuyển đổi kiểu dữ liệu
+2025-04-24 13:49:58,720 - root - INFO - Sau khi chuyển đổi kiểu dữ liệu: 300 dòng x 7 cột
+2025-04-24 13:49:58,720 - root - INFO - Bắt đầu xử lý bản ghi trùng lặp
+2025-04-24 13:49:58,720 - root - INFO - Đã loại bỏ 0 bản ghi trùng lặp
+2025-04-24 13:49:58,720 - root - INFO - Sau khi xử lý trùng lặp: 300 dòng x 7 cột
+2025-04-24 13:49:58,720 - root - INFO - Bắt đầu xử lý giá trị ngoại lai với phương pháp: iqr
+2025-04-24 13:49:58,730 - root - INFO - Sau khi xử lý outliers: 300 dòng x 7 cột
+2025-04-24 13:49:58,733 - root - INFO - Bắt đầu áp dụng định dạng tự động
+2025-04-24 13:49:58,802 - root - INFO - Đã áp dụng định dạng cho 3 cột
+2025-04-24 13:49:58,802 - root - INFO - Đang lưu dữ liệu đã làm sạch vào: D:\Zalo\Zalo Received Files\Clean-CSV\data\processed\output.csv
+2025-04-24 13:49:58,802 - root - INFO - Đã tạo thư mục đầu ra: D:\Zalo\Zalo Received Files\Clean-CSV\data\processed
+2025-04-24 13:49:58,802 - root - INFO - Đang lưu DataFrame (300 dòng x 7 cột) vào D:\Zalo\Zalo Received Files\Clean-CSV\data\processed\output.csv
+2025-04-24 13:49:58,840 - root - INFO - Đã xác minh file có thể đọc lại được: D:\Zalo\Zalo Received Files\Clean-CSV\data\processed\output.csv
+2025-04-24 13:49:58,840 - root - INFO - Đã lưu thành công: D:\Zalo\Zalo Received Files\Clean-CSV\data\processed\output.csv (20,437 bytes)
+2025-04-24 13:49:58,842 - root - INFO - Đã tạo thư mục đầu ra: D:\Zalo\Zalo Received Files\Clean-CSV\data\reports
+2025-04-24 13:49:58,843 - root - INFO - Đã tạo báo cáo HTML tại: data/reports\data_cleaning_report_20250424_134958.html
+2025-04-24 13:49:58,843 - root - INFO - Báo cáo đã được tạo tại: data/reports\data_cleaning_report_20250424_134958.html
+2025-04-24 13:49:58,845 - root - ERROR - Lỗi khi xuất báo cáo JSON: keys must be str, int, float, bool or None, not Int64DType
+2025-04-24 13:49:58,847 - root - INFO - Hoàn thành quá trình làm sạch dữ liệu
+2025-04-24 13:49:58,847 - root - INFO - Tóm tắt: 300 dòng ban đầu -> 300 dòng sau khi làm sạch
+2025-04-24 13:49:58,847 - root - INFO - Giá trị thiếu: 0 ban đầu -> 0 sau khi làm sạch
+2025-04-24 13:49:58,847 - root - INFO - Định dạng đầu ra: CSV (separator: ',')

@@ -1,0 +1,71 @@
+{
+  "input_file": "data/raw/input.csv",
+  "output_file": "D:\\Zalo\\Zalo Received Files\\Clean-CSV\\data\\processed\\output.csv",
+  "log_file": "logs\\data_cleaning_20250424_134958.log",
+  "processing_steps": [
+    {
+      "step": "Xử lý giá trị thiếu",
+      "method": "fill_median",
+      "details": "Đã điền giá trị thiếu bằng phương pháp median"
+    },
+    {
+      "step": "Chuẩn hóa văn bản",
+      "method": "normalize_text",
+      "details": "Đã chuẩn hóa các cột văn bản (loại bỏ khoảng trắng thừa, dấu câu thừa)"
+    },
+    {
+      "step": "Xử lý tính nhất quán chữ hoa/thường",
+      "method": "title",
+      "details": "Đã chuyển các chuỗi văn bản sang dạng title"
+    },
+    {
+      "step": "Chuẩn hóa ngày tháng",
+      "method": "standardize_dates",
+      "columns": [
+        "name",
+        "online date"
+      ],
+      "details": "Đã chuẩn hóa 2 cột ngày tháng"
+    },
+    {
+      "step": "Chuyển đổi kiểu dữ liệu",
+      "method": "convert_to_numeric",
+      "columns": [
+        "id",
+        "latitude",
+        "longitude",
+        "dpcapacity",
+        "landmark"
+      ],
+      "details": "Đã chuyển đổi 5 cột sang kiểu số"
+    },
+    {
+      "step": "Xử lý bản ghi trùng lặp",
+      "method": "remove_duplicates",
+      "details": "Đã loại bỏ 0 bản ghi trùng lặp"
+    },
+    {
+      "step": "Xử lý giá trị ngoại lai",
+      "method": "iqr",
+      "columns": [
+        "id",
+        "latitude",
+        "longitude",
+        "dpcapacity",
+        "landmark"
+      ],
+      "details": "Đã xử lý giá trị ngoại lai trên các cột số với phương pháp iqr"
+    },
+    {
+      "step": "Chuẩn hóa định dạng dữ liệu",
+      "details": "Đã áp dụng định dạng phù hợp cho 3 cột"
+    }
+  ],
+  "stats": {
+    "before": {
+      "row_count": "300",
+      "column_count": "7",
+      "memory_usage": 56091,
+      "missing_values": 0,
+      "dtypes": {
+        
